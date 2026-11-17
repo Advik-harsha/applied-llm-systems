@@ -45,8 +45,12 @@ All $N = 7 \times 10^9$ parameters are updated.
    *(Note: Even with 8-bit AdamW, optimizer states require $4\text{ bytes/param} = 28.0\text{ GB}$)*.
 
 4. **Activations ($M_{\text{activations}}$):**
-   * Using **Activation (Gradient) Checkpointing** with batch size $b=2$ and sequence length $s=2048$:
-   * $M_{\text{activations}} \approx 4.5\text{ GB} - 6.0\text{ GB}$.
+   * **Without Gradient Checkpointing:** Storing intermediate activation tensors for all 32 layers requires:
+     $$M_{\text{act\_no\_ckpt}} \approx b \cdot s \cdot h \cdot L \cdot \left(34 + 5 \cdot \frac{a \cdot s}{h}\right) \text{ bytes}$$
+     For $b=2, s=2048, h=4096, L=32, a=32$: $\mathbf{M_{\text{act\_no\_ckpt}} \approx 38.6\text{ GB}}$!
+   * **With Activation (Gradient) Checkpointing:** Only the input activation to each transformer block is retained during the forward pass; all intermediate layer activations are recomputed on-the-fly during backpropagation:
+     $$M_{\text{act\_ckpt}} \approx 2 \cdot b \cdot s \cdot h \cdot L \cdot \text{bytes} + M_{\text{attn\_scratchpad}} \approx 2.15\text{ GB} + 2.35\text{ GB} = \mathbf{4.50\text{ GB}}$$
+     *(Enabling gradient checkpointing trades ~20% compute time for an 88% reduction in activation memory!)*
 
 5. **CUDA Runtime Overhead ($M_{\text{overhead}}$):**
    * CUDA kernels, cuDNN handles, and allocator reserve $\approx 2.0\text{ GB}$.

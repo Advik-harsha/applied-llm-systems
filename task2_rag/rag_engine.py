@@ -218,3 +218,46 @@ class ScratchRAG:
             f"ANSWER:"
         )
         return prompt
+
+    def answer_query(self, query: str, top_k: int = 5) -> dict:
+        """
+        End-to-end RAG pipeline:
+        1. Retrieve top-k nearest chunks
+        2. Format prompt
+        3. Synthesize factual response based on retrieved passages
+        """
+        results = self.search(query, top_k=top_k)
+        if not results:
+            return {
+                "query": query,
+                "answer": "No relevant context found in document.",
+                "retrieved_chunks": []
+            }
+            
+        prompt = self.format_prompt(query, results)
+        
+        # Extractive factual answer synthesis from top-ranked chunk
+        top_chunk = results[0]["chunk"]["text"]
+        top_page = results[0]["chunk"]["page"]
+        
+        # Extract the most salient sentence from the top chunk matching query tokens
+        query_words = set(re.sub(r'[^a-zA-Z0-9\s]', '', query.lower()).split())
+        sentences = [s.strip() for s in re.split(r'[.!?]', top_chunk) if len(s.strip()) > 20]
+        
+        best_sentence = sentences[0] if sentences else top_chunk
+        best_score = -1
+        for s in sentences:
+            s_words = set(s.lower().split())
+            overlap = len(query_words.intersection(s_words))
+            if overlap > best_score:
+                best_score = overlap
+                best_sentence = s
+                
+        synthesized_answer = f"{best_sentence.strip()} (Source: NIST AI RMF, Page {top_page})."
+        
+        return {
+            "query": query,
+            "answer": synthesized_answer,
+            "prompt_for_llm": prompt,
+            "retrieved_chunks": results
+        }

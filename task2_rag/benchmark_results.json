@@ -8,7 +8,7 @@
     "recall_at_5_pct": 80.0,
     "mrr_at_5": 0.7667,
     "hits": 12,
-    "avg_query_latency_ms": 0.43,
+    "avg_query_latency_ms": 0.19,
     "detailed": [
       {
         "question_id": "q01",
@@ -16,7 +16,7 @@
         "ground_truth_page": 18,
         "hit": true,
         "rank": 1,
-        "latency_ms": 3.78
+        "latency_ms": 0.46
       },
       {
         "question_id": "q02",
@@ -24,7 +24,7 @@
         "ground_truth_page": 20,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.31
+        "latency_ms": 0.2
       },
       {
         "question_id": "q03",
@@ -32,7 +32,7 @@
         "ground_truth_page": 30,
         "hit": true,
         "rank": 2,
-        "latency_ms": 0.22
+        "latency_ms": 0.17
       },
       {
         "question_id": "q04",
@@ -40,7 +40,7 @@
         "ground_truth_page": 30,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.19
+        "latency_ms": 0.18
       },
       {
         "question_id": "q05",
@@ -48,7 +48,7 @@
         "ground_truth_page": 17,
         "hit": false,
         "rank": null,
-        "latency_ms": 0.17
+        "latency_ms": 0.16
       },
       {
         "question_id": "q06",
@@ -56,7 +56,7 @@
         "ground_truth_page": 25,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.19
+        "latency_ms": 0.18
       },
       {
         "question_id": "q07",
@@ -64,7 +64,7 @@
         "ground_truth_page": 27,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.16
+        "latency_ms": 0.15
       },
       {
         "question_id": "q08",
@@ -72,7 +72,7 @@
         "ground_truth_page": 37,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.16
+        "latency_ms": 0.17
       },
       {
         "question_id": "q09",
@@ -88,7 +88,7 @@
         "ground_truth_page": 32,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.17
+        "latency_ms": 0.16
       },
       {
         "question_id": "q11",
@@ -96,7 +96,7 @@
         "ground_truth_page": 51,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.19
+        "latency_ms": 0.18
       },
       {
         "question_id": "q12",
@@ -139,7 +139,7 @@
     "recall_at_5_pct": 80.0,
     "mrr_at_5": 0.6778,
     "hits": 12,
-    "avg_query_latency_ms": 0.14,
+    "avg_query_latency_ms": 0.13,
     "detailed": [
       {
         "question_id": "q01",
@@ -147,7 +147,7 @@
         "ground_truth_page": 18,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.21
+        "latency_ms": 0.18
       },
       {
         "question_id": "q02",
@@ -155,7 +155,7 @@
         "ground_truth_page": 20,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.2
+        "latency_ms": 0.13
       },
       {
         "question_id": "q03",
@@ -179,7 +179,7 @@
         "ground_truth_page": 17,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.12
+        "latency_ms": 0.11
       },
       {
         "question_id": "q06",
@@ -195,7 +195,7 @@
         "ground_truth_page": 27,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.11
+        "latency_ms": 0.1
       },
       {
         "question_id": "q08",

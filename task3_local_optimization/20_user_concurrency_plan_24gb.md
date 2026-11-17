@@ -107,9 +107,13 @@ In conventional inference implementations (Hugging Face Transformers), memory fo
 * PagedAttention partitions the KV cache into fixed-size physical blocks (e.g., 16 tokens per block) allocated on demand in non-contiguous memory, exactly like Virtual Memory paging in modern OS kernels.
 * **Result:** Near-zero memory waste ($< 4\%$), allowing the 5.0 GB KV budget to be utilized with 96%+ efficiency.
 
-### 2. Continuous (Iteration-Level) Batching
+### 2. Continuous (Iteration-Level) Batching & Chunked Prefill
 Rather than waiting for an entire batch of 20 requests to complete generation before scheduling new ones:
 * **Iteration-Level Scheduling:** When User #3 finishes generating their 150-token response early, their KV cache blocks are instantly reclaimed, and User #21's waiting prompt is dynamically inserted into the very next forward iteration.
+* **Prefill vs. Decode Decoupling (Chunked Prefill):**
+  * **Prefill Phase (Prompt ingestion):** Compute-bound ($O(B \cdot S^2)$ operations on Tensor Cores). Processing a 1,500-token prompt creates large computational bursts.
+  * **Decode Phase (Autoregressive generation):** Memory-bandwidth-bound ($O(B \cdot 1)$ operations streaming model weights from VRAM).
+  * *Chunked Prefill Solution:* Large prompt prefill batches are broken into small chunked token slices (e.g., 512 tokens per chunk) interleaved alongside active decoding steps. This prevents prefill spikes from degrading Inter-Token Latency (ITL) for currently decoding users, maintaining ITL strictly under **$30\text{ ms per token}$** ($>33\text{ tok/sec}$).
 * **Latency Guarantee:** Eliminates head-of-line blocking, maintaining steady $> 35\text{ tok/sec}$ throughput across all 20 active connections.
 
 ### 3. Traffic Spike & Context Overflow Strategy

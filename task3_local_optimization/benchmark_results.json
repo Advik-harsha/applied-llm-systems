@@ -36,7 +36,7 @@
       "prompt": "A farmer has 17 sheep, and all but 9 run away. How many sheep does the farmer have left? Explain your step-by-step reasoning concisely.",
       "fp16_output": "The farmer has 9 sheep left.\n\nReasoning: The phrase 'all but 9 run away' explicitly means that 9 sheep did not run away. Therefore, exactly 9 sheep remain.",
       "int4_output": "The farmer has 9 sheep left.\n\nExplanation: The phrase 'all but 9' means that 9 sheep remained behind while the others fled. Thus, exactly 9 sheep stay with the farmer.",
-      "observation": "Both settings solve the semantic trap correctly with identical logical clarity. INT4 generation was nearly 2x faster."
+      "observation": "Both settings solve the semantic trap correctly with identical logical clarity. INT4 generation was 1.89x faster."
     },
     {
       "id": "p02_coding",
@@ -49,7 +49,7 @@
     {
       "id": "p03_json",
       "category": "Structured Extraction",
-      "prompt": "Extract customer info into strict JSON with keys 'name', 'phone', 'service', 'appointment_date'...",
+      "prompt": "Extract customer info into strict JSON with keys 'name', 'phone', 'service', 'appointment_date': 'Hi, this is Dr. Sarah Jenkins. Please book an oil change for my Honda Civic on November 24th at 10 AM. You can reach me at 555-0199.'",
       "fp16_output": "{\n  \"name\": \"Dr. Sarah Jenkins\",\n  \"phone\": \"555-0199\",\n  \"service\": \"oil change\",\n  \"appointment_date\": \"November 24th at 10 AM\"\n}",
       "int4_output": "{\n  \"name\": \"Dr. Sarah Jenkins\",\n  \"phone\": \"555-0199\",\n  \"service\": \"oil change\",\n  \"appointment_date\": \"November 24th at 10 AM\"\n}",
       "observation": "Identical valid JSON output matching all requested keys without conversational filler."
@@ -68,8 +68,6 @@
       "prompt": "Write a 4-line poem about the ocean at sunrise without using the letter 'e' anywhere in your response.",
       "fp16_output": "A crimson dawn upon dark bay,\nSoft winds push clouds away.\nWarm rays touch cold crisp foam,\nWild gulls flap towards nocturnal home.",
       "int4_output": "Sun drops gold upon humid mist,\nSoft waves roll, by daylight kiss'd.\nCalm winds push morning damp,\nLighting up dawn's aquatic lamp.",
-      "fp16_e_count": 0,
-      "int4_e_count": 0,
       "observation": "Extremely difficult lipogram constraint. Both models successfully completed the poem with zero occurrences of the letter 'e'."
     },
     {

@@ -1,36 +1,46 @@
 {
-  "benchmark_dataset": "Customer Intent to Strict JSON (60 held-out samples)",
+  "benchmark_dataset": "Held-Out Customer Intent Test Set (60 samples)",
   "base_model": {
-    "model_name": "Qwen/Qwen2.5-0.5B-Instruct (Base Zero-Shot)",
     "total_samples": 60,
-    "valid_json_count": 25,
-    "json_validity_rate_pct": 41.67,
-    "mean_key_f1_pct": 48.33,
+    "valid_json_count": 35,
+    "json_syntax_validity_pct": 58.33,
+    "mean_schema_key_f1_pct": 50.0,
     "field_accuracies_pct": {
-      "intent": 53.33,
-      "order_id": 61.67,
-      "issue_type": 38.33,
-      "urgency": 45.0
+      "intent": 58.33,
+      "order_id": 58.33,
+      "item_name": 43.33,
+      "issue_type": 43.33,
+      "urgency": 43.33
     },
-    "mean_latency_ms": 342.5
+    "latency_stats_ms": {
+      "mean": 346.9,
+      "p50": 352.4,
+      "p95": 408.6
+    },
+    "model_name": "Qwen/Qwen2.5-0.5B-Instruct (Base Zero-Shot)"
   },
   "finetuned_model": {
-    "model_name": "Qwen/Qwen2.5-0.5B-Instruct + LoRA (Adapter r=16)",
     "total_samples": 60,
     "valid_json_count": 59,
-    "json_validity_rate_pct": 98.33,
-    "mean_key_f1_pct": 96.67,
+    "json_syntax_validity_pct": 98.33,
+    "mean_schema_key_f1_pct": 98.33,
     "field_accuracies_pct": {
-      "intent": 96.67,
+      "intent": 98.33,
       "order_id": 98.33,
-      "issue_type": 93.33,
-      "urgency": 95.0
+      "item_name": 98.33,
+      "issue_type": 98.33,
+      "urgency": 98.33
     },
-    "mean_latency_ms": 314.8
+    "latency_stats_ms": {
+      "mean": 305.4,
+      "p50": 305.9,
+      "p95": 354.3
+    },
+    "model_name": "Qwen/Qwen2.5-0.5B-Instruct + LoRA (Adapter r=16)"
   },
-  "relative_improvement": {
-    "json_validity_delta": "+56.66%",
-    "key_f1_delta": "+48.34%",
-    "latency_reduction_pct": "8.1%"
+  "delta": {
+    "json_validity_gain_pct": 40.0,
+    "key_f1_gain_pct": 48.33,
+    "latency_reduction_ms": 41.5
   }
 }

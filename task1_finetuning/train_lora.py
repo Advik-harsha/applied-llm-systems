@@ -1,6 +1,6 @@
 """
 Fine-tuning Qwen2.5-0.5B-Instruct using LoRA for Structured Intent Extraction.
-Compatible with standard PyTorch, Hugging Face Transformers, and PEFT.
+Compatible with PyTorch, Hugging Face Transformers, PEFT, and TRL.
 """
 
 import os
@@ -9,8 +9,7 @@ from datasets import load_dataset
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
-    TrainingArguments,
-    DataCollatorForSeq2Seq
+    TrainingArguments
 )
 from peft import LoraConfig, get_peft_model, TaskType
 from trl import SFTTrainer
@@ -28,6 +27,7 @@ def main():
         
     device = "cuda" if torch.cuda.is_available() else "cpu"
     torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+    print(f"Device: {device} | Dtype: {torch_dtype}")
     
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_ID,
@@ -73,20 +73,19 @@ def main():
         warmup_ratio=0.05,
         num_train_epochs=3,
         logging_steps=10,
-        eval_strategy="epoch",
         save_strategy="epoch",
         fp16=torch.cuda.is_available(),
         optim="adamw_torch",
         report_to="none"
     )
     
+    # SFTTrainer instantiation
     trainer = SFTTrainer(
         model=model,
         train_dataset=formatted_dataset["train"],
         eval_dataset=formatted_dataset["test"],
         dataset_text_field="text",
         max_seq_length=512,
-        tokenizer=tokenizer,
         args=training_args
     )
     
