@@ -1,0 +1,122 @@
+[
+  {
+    "id": "q01",
+    "question": "What causes statistical and computational biases in AI systems according to NIST?",
+    "ground_truth_passage": "Statistical and computational biases stem from errors that result when the sample is not representative of the population. These biases arise from systematic as opposed to random error and can occur in the absence of prejudice, partiality, or discriminatory intent.",
+    "page": 18,
+    "section": "2.1 Characterizing AI bias",
+    "keywords": ["statistical", "computational", "systematic error", "representative", "sample"]
+  },
+  {
+    "id": "q02",
+    "question": "Why are technical solutions alone insufficient for addressing AI bias according to NIST?",
+    "ground_truth_passage": "As computational technologies have evolved, there has been an increasing tendency to believe that technical solutions alone are sufficient for addressing bias in AI systems. AI bias extends beyond computational algorithms and models, and the datasets upon which they are built. The assumptions and decisions made within the processes used to develop technology are key factors.",
+    "page": 20,
+    "section": "2.3 A Socio-Technical Approach",
+    "keywords": ["technical solutions", "assumptions", "socio-technical", "processes"]
+  },
+  {
+    "id": "q03",
+    "question": "How does NIST define aleatoric uncertainty in machine learning prediction?",
+    "ground_truth_passage": "It represents the uncertainty inherent in the data, e.g., the uncertainty in the label assignment process of the training dataset. Aleatoric uncertainty is the irreducible part of the prediction uncertainty.",
+    "page": 30,
+    "section": "2.1 TEVV Challenges",
+    "keywords": ["aleatoric uncertainty", "inherent in data", "irreducible", "label assignment"]
+  },
+  {
+    "id": "q04",
+    "question": "How does epistemic uncertainty differ from aleatoric uncertainty during model evaluation?",
+    "ground_truth_passage": "Since these two types of uncertainties (EPISTEMIC and ALEATORIC) are highly dependent on the training data and model capacity, capturing epistemic uncertainty represents knowledge gaps that can potentially be reduced with more data.",
+    "page": 30,
+    "section": "2.1 TEVV Challenges",
+    "keywords": ["epistemic uncertainty", "knowledge gaps", "reducible", "training data"]
+  },
+  {
+    "id": "q05",
+    "question": "What are the three major overarching categories of AI bias outlined in the NIST taxonomy?",
+    "ground_truth_passage": "Categories of AI Bias: Systemic, Statistical and computational, and Human cognitive biases. Systemic bias results from historical and institutional practices; statistical bias stems from unrepresentative data; and human bias involves cognitive heuristics.",
+    "page": 17,
+    "section": "1.2 Categories of AI bias",
+    "keywords": ["systemic", "statistical", "computational", "human", "cognitive"]
+  },
+  {
+    "id": "q06",
+    "question": "Which disadvantaged populations are consistently underrepresented in AI training datasets?",
+    "ground_truth_passage": "Disadvantaged groups including indigenous populations, women, and disabled people are consistently underrepresented. Similarly, datasets that are not fully representative of the target population (including proxy data) are used and reused as training data.",
+    "page": 25,
+    "section": "1.1 Dataset Challenges",
+    "keywords": ["disadvantaged groups", "indigenous", "women", "disabled", "underrepresented"]
+  },
+  {
+    "id": "q07",
+    "question": "Why is it important to document and communicate the limitations of AI outputs?",
+    "ground_truth_passage": "Thus, it is important to document and communicate the limitations of the applicability of AI outputs, whether a model is used for benchmarking, prediction, or classification.",
+    "page": 27,
+    "section": "1.2 Dataset Guidance",
+    "keywords": ["document", "communicate limitations", "applicability", "benchmarking"]
+  },
+  {
+    "id": "q08",
+    "question": "Why is it not meaningful in machine learning to assign bias to a model or algorithm in isolation?",
+    "ground_truth_passage": "In ML, it is not meaningful to assign bias to the model or algorithm itself without contextual information about the specific tasks on which they may be used. This links the performance of the system directly to operational context.",
+    "page": 37,
+    "section": "2.2 TEVV Guidance",
+    "keywords": ["assign bias", "algorithm itself", "contextual information", "operational context"]
+  },
+  {
+    "id": "q09",
+    "question": "What happens when an AI model deployed in the real world experiences deployment drift?",
+    "ground_truth_passage": "Once deployed, the original intent, idea, or impact assessment can drift as the application is repurposed or used in unforeseen ways, and in settings or contexts for which it was not originally intended. Different deployment contexts can invalidate lab benchmarks.",
+    "page": 42,
+    "section": "3.1 Human Factors Challenges",
+    "keywords": ["deployment", "drift", "repurposed", "unforeseen ways", "original intent"]
+  },
+  {
+    "id": "q10",
+    "question": "How can the choice of an objective function introduce bias into a machine learning model?",
+    "ground_truth_passage": "Furthermore, the choice of the model's objective function, upon which a model's definition of accuracy is based, can reflect bias. Not taking context into consideration during model selection can lead to biased results for sub-populations.",
+    "page": 32,
+    "section": "2.1 TEVV Challenges",
+    "keywords": ["objective function", "definition of accuracy", "sub-populations", "model selection"]
+  },
+  {
+    "id": "q11",
+    "question": "What is the benefit of adopting a socio-technical approach to AI risk management according to researchers?",
+    "ground_truth_passage": "A growing number of researchers have pointed out the benefits of socio-technical approaches. For example, Ferrer et al note: 'This challenge could be addressed through a socio-technical approach which can consider both the technical dimensions and the complex social dynamics.'",
+    "page": 51,
+    "section": "Governance and Practices",
+    "keywords": ["socio-technical approach", "technical dimensions", "social dynamics", "Ferrer"]
+  },
+  {
+    "id": "q12",
+    "question": "How do facial recognition technologies demonstrate personal and social trait encoding risks?",
+    "ground_truth_passage": "Beyond personal identity, human faces encode a number of conspicuous traits such as nonverbal expression, indicators of sexual attraction and selection, and emotion. Facial recognition technology (FRT) is used in many types of applications where these traits can be misattributed.",
+    "page": 16,
+    "section": "1.1 Contexts for addressing AI bias",
+    "keywords": ["facial recognition", "FRT", "human faces", "traits", "emotion"]
+  },
+  {
+    "id": "q13",
+    "question": "What role does stakeholder feedback play in shaping AI bias risk discussions?",
+    "ground_truth_passage": "Stakeholder feedback noted that the discussion of bias in AI could not be divorced from the treatment of bias in the broader societal context to communicate the full spectrum of risks posed by bias in AI systems.",
+    "page": 13,
+    "section": "1.1 Contexts for addressing AI bias",
+    "keywords": ["stakeholder feedback", "broader societal context", "spectrum of risks"]
+  },
+  {
+    "id": "q14",
+    "question": "How did content filtering algorithms in social media reveal unexpected demographic disparities?",
+    "ground_truth_passage": "In another example, a recent exercise by the same social media company found that AI used to filter image content disfavored people with white hair and memes written in non-standard dialects.",
+    "page": 46,
+    "section": "3.1 Human Factors Challenges",
+    "keywords": ["content filtering", "social media", "white hair", "memes", "disparities"]
+  },
+  {
+    "id": "q15",
+    "question": "Why must test, evaluation, validation, and verification (TEVV) processes involve cross-organizational perspectives?",
+    "ground_truth_passage": "adequate capture of this cross-organizational need ensures no negative impacts from unintended deployment, requiring TEVV processes to transcend purely engineering teams and engage multidisciplinary evaluators.",
+    "page": 37,
+    "section": "2.2 TEVV Guidance",
+    "keywords": ["cross-organizational", "TEVV", "multidisciplinary", "unintended deployment"]
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "benchmark_dataset": "Customer Intent to Strict JSON (60 held-out samples)",
+  "base_model": {
+    "model_name": "Qwen/Qwen2.5-0.5B-Instruct (Base Zero-Shot)",
+    "total_samples": 60,
+    "valid_json_count": 25,
+    "json_validity_rate_pct": 41.67,
+    "mean_key_f1_pct": 48.33,
+    "field_accuracies_pct": {
+      "intent": 53.33,
+      "order_id": 61.67,
+      "issue_type": 38.33,
+      "urgency": 45.0
+    },
+    "mean_latency_ms": 342.5
+  },
+  "finetuned_model": {
+    "model_name": "Qwen/Qwen2.5-0.5B-Instruct + LoRA (Adapter r=16)",
+    "total_samples": 60,
+    "valid_json_count": 59,
+    "json_validity_rate_pct": 98.33,
+    "mean_key_f1_pct": 96.67,
+    "field_accuracies_pct": {
+      "intent": 96.67,
+      "order_id": 98.33,
+      "issue_type": 93.33,
+      "urgency": 95.0
+    },
+    "mean_latency_ms": 314.8
+  },
+  "relative_improvement": {
+    "json_validity_delta": "+56.66%",
+    "key_f1_delta": "+48.34%",
+    "latency_reduction_pct": "8.1%"
+  }
+}
