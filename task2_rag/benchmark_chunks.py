@@ -77,6 +77,13 @@ def evaluate_retrieval(rag, test_set, top_k=5):
     }
 
 def main():
+    if not os.path.exists(PDF_PATH) or os.path.getsize(PDF_PATH) < 1000000:
+        print("NIST document not found locally. Initiating automated download...")
+        import sys
+        sys.path.append(os.path.join(os.path.dirname(__file__), "documents"))
+        from download_doc import download_document
+        download_document()
+
     with open(TEST_DATA_PATH, "r", encoding="utf-8") as f:
         test_set = json.load(f)
         

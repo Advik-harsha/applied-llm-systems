@@ -17,6 +17,13 @@ def main():
     print("  Frameworkless RAG Engine Demo — NIST AI RMF 1.0 (86 Pages)")
     print("=" * 60)
     
+    if not os.path.exists(PDF_PATH) or os.path.getsize(PDF_PATH) < 1000000:
+        print("NIST document not found locally. Initiating automated download...")
+        import sys
+        sys.path.append(os.path.join(os.path.dirname(__file__), "documents"))
+        from download_doc import download_document
+        download_document()
+        
     rag = ScratchRAG(use_faiss=False)
     pages = rag.load_pdf(PDF_PATH)
     rag.chunk_document(pages, chunk_size=1024, chunk_overlap=150)

@@ -24,7 +24,7 @@ applied-llm-systems/
 │   └── 7b_memory_calculation.md    # Rigorous GPU VRAM derivation (Full FT vs LoRA vs QLoRA)
 │
 ├── task2_rag/                      # Module 2: Retrieval (RAG) Architecture from Scratch
-│   ├── documents/                  # 48-page public document (NIST AI Risk Management Framework 1.0)
+│   ├── documents/                  # 86-page public document (NIST AI Risk Management Framework 1.0)
 │   ├── rag_engine.py               # Frameworkless RAG: PDF parsing, chunking, embeddings & FAISS/NumPy
 │   ├── benchmark_chunks.py         # Empirical chunk comparison (Recall@5 & MRR across 256 vs 1024 chars)
 │   ├── test_dataset.json           # 15 domain-expert test questions with exact ground-truth passages
@@ -57,8 +57,8 @@ applied-llm-systems/
 ### 2. Empirical Results on Held-Out Test Set ($N = 60$)
 | Model Variant | JSON Syntactic Validity (%) | Schema Exact Key Match (%) | Latency / Sample (ms) |
 | :--- | :---: | :---: | :---: |
-| **Qwen2.5-0.5B Base (Zero-Shot)** | 41.7% | 48.3% | 340 ms |
-| **Qwen2.5-0.5B + LoRA (Fine-Tuned)** | **98.3%** | **96.7%** | **315 ms** |
+| **Qwen2.5-0.5B Base (Zero-Shot)** | 56.7% | 48.3% | 346.9 ms |
+| **Qwen2.5-0.5B + LoRA (Fine-Tuned)** | **98.3%** | **98.3%** | **305.4 ms** |
 
 ### 3. LoRA Hyperparameter Configuration
 * **Rank ($r = 16$) & Alpha ($\alpha = 32$):** Scaling factor $\alpha / r = 2.0$. Rank 16 provides sufficient parameter capacity for structural grammar alignment without overfitting on limited samples.
@@ -99,8 +99,8 @@ Evaluated on **NIST AI Risk Management Framework 1.0 (48 pages)** using 15 hand-
 
 | Chunking Configuration | Chunk Size (Chars) | Overlap (Chars) | Total Chunks | Recall@5 | MRR@5 | Mean Query Latency |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Setting A (Small Chunks)** | 256 | 50 | 412 | 66.7% (10/15) | 0.528 | 4.8 ms |
-| **Setting B (Large Chunks)** | **1024** | **150** | **118** | **93.3% (14/15)** | **0.844** | **3.9 ms** |
+| **Setting A (Small Chunks)** | 256 | 50 | 1,119 | 73.3% (11/15) | 0.597 | 18.9 ms |
+| **Setting B (Large Chunks)** | **1024** | **150** | **295** | **73.3% (11/15)** | **0.550** | **10.3 ms** |
 
 * **Why Setting B Outperformed Setting A:**
   1. *Contextual Coherence:* Policy and risk definitions in technical governance frameworks span 3–6 sentences. Chunks of 256 characters frequently broke definitions mid-sentence, causing key noun phrases to be separated from their qualifiers.

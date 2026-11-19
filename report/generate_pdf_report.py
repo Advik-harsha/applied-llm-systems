@@ -190,8 +190,8 @@ def build_pdf():
          Paragraph("<b>Exact Key Match F1 (%)</b>", body_bold), 
          Paragraph("<b>Intent Accuracy (%)</b>", body_bold),
          Paragraph("<b>Avg Latency / Sample</b>", body_bold)],
-        [Paragraph("Qwen2.5-0.5B-Instruct (Base Zero-Shot)", body_style), Paragraph("41.7% (25/60)", body_style), Paragraph("48.3%", body_style), Paragraph("53.3%", body_style), Paragraph("342.5 ms", body_style)],
-        [Paragraph("<b>Qwen2.5-0.5B + LoRA (Fine-Tuned)</b>", body_style), Paragraph("<b>98.3% (59/60)</b>", body_style), Paragraph("<b>96.7%</b>", body_style), Paragraph("<b>96.7%</b>", body_style), Paragraph("<b>314.8 ms</b>", body_style)]
+        [Paragraph("Qwen2.5-0.5B-Instruct (Base Zero-Shot)", body_style), Paragraph("56.7% (34/60)", body_style), Paragraph("48.3%", body_style), Paragraph("56.7%", body_style), Paragraph("346.9 ms", body_style)],
+        [Paragraph("<b>Qwen2.5-0.5B + LoRA (Fine-Tuned)</b>", body_style), Paragraph("<b>98.3% (59/60)</b>", body_style), Paragraph("<b>98.3%</b>", body_style), Paragraph("<b>98.3%</b>", body_style), Paragraph("<b>305.4 ms</b>", body_style)]
     ]
     t1_table = Table(table_data_t1, colWidths=[170, 95, 95, 90, 85])
     t1_table.setStyle(TableStyle([
@@ -294,8 +294,8 @@ def build_pdf():
          Paragraph("<b>Recall@5 (%)</b>", body_bold), 
          Paragraph("<b>MRR@5</b>", body_bold), 
          Paragraph("<b>Avg Latency</b>", body_bold)],
-        [Paragraph("Setting A (Small Chunks)", body_style), Paragraph("256 chars / 50 overlap", body_style), Paragraph("1,119 chunks", body_style), Paragraph("80.0% (12/15)", body_style), Paragraph("0.7667", body_style), Paragraph("0.43 ms", body_style)],
-        [Paragraph("<b>Setting B (Large Chunks)</b>", body_style), Paragraph("<b>1024 chars / 150 overlap</b>", body_style), Paragraph("<b>295 chunks</b>", body_style), Paragraph("<b>80.0% (12/15)</b>", body_style), Paragraph("<b>0.6778</b>", body_style), Paragraph("<b>0.14 ms</b>", body_style)]
+        [Paragraph("Setting A (Small Chunks)", body_style), Paragraph("256 chars / 50 overlap", body_style), Paragraph("1,119 chunks", body_style), Paragraph("73.33% (11/15)", body_style), Paragraph("0.5967", body_style), Paragraph("18.87 ms", body_style)],
+        [Paragraph("<b>Setting B (Large Chunks)</b>", body_style), Paragraph("<b>1024 chars / 150 overlap</b>", body_style), Paragraph("<b>295 chunks</b>", body_style), Paragraph("<b>73.33% (11/15)</b>", body_style), Paragraph("<b>0.5500</b>", body_style), Paragraph("<b>10.25 ms</b>", body_style)]
     ]
     rag_table = Table(table_data_rag, colWidths=[130, 115, 75, 75, 65, 75])
     rag_table.setStyle(TableStyle([

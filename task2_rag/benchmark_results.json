@@ -5,34 +5,34 @@
     "chunk_size_chars": 256,
     "chunk_overlap_chars": 50,
     "total_chunks": 1119,
-    "recall_at_5_pct": 80.0,
-    "mrr_at_5": 0.7667,
-    "hits": 12,
-    "avg_query_latency_ms": 0.19,
+    "recall_at_5_pct": 73.33,
+    "mrr_at_5": 0.5967,
+    "hits": 11,
+    "avg_query_latency_ms": 18.87,
     "detailed": [
       {
         "question_id": "q01",
         "question": "What causes statistical and computational biases in AI systems according to NIST?",
         "ground_truth_page": 18,
-        "hit": true,
-        "rank": 1,
-        "latency_ms": 0.46
+        "hit": false,
+        "rank": null,
+        "latency_ms": 20.74
       },
       {
         "question_id": "q02",
         "question": "Why are technical solutions alone insufficient for addressing AI bias according to NIST?",
         "ground_truth_page": 20,
         "hit": true,
-        "rank": 1,
-        "latency_ms": 0.2
+        "rank": 5,
+        "latency_ms": 15.8
       },
       {
         "question_id": "q03",
         "question": "How does NIST define aleatoric uncertainty in machine learning prediction?",
         "ground_truth_page": 30,
         "hit": true,
-        "rank": 2,
-        "latency_ms": 0.17
+        "rank": 1,
+        "latency_ms": 76.93
       },
       {
         "question_id": "q04",
@@ -40,7 +40,7 @@
         "ground_truth_page": 30,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.18
+        "latency_ms": 18.78
       },
       {
         "question_id": "q05",
@@ -48,7 +48,7 @@
         "ground_truth_page": 17,
         "hit": false,
         "rank": null,
-        "latency_ms": 0.16
+        "latency_ms": 19.77
       },
       {
         "question_id": "q06",
@@ -56,7 +56,7 @@
         "ground_truth_page": 25,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.18
+        "latency_ms": 17.81
       },
       {
         "question_id": "q07",
@@ -64,15 +64,15 @@
         "ground_truth_page": 27,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.15
+        "latency_ms": 17.38
       },
       {
         "question_id": "q08",
         "question": "Why is it not meaningful in machine learning to assign bias to a model or algorithm in isolation?",
         "ground_truth_page": 37,
         "hit": true,
-        "rank": 1,
-        "latency_ms": 0.17
+        "rank": 2,
+        "latency_ms": 12.37
       },
       {
         "question_id": "q09",
@@ -80,15 +80,15 @@
         "ground_truth_page": 42,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.16
+        "latency_ms": 11.95
       },
       {
         "question_id": "q10",
         "question": "How can the choice of an objective function introduce bias into a machine learning model?",
         "ground_truth_page": 32,
         "hit": true,
-        "rank": 1,
-        "latency_ms": 0.16
+        "rank": 4,
+        "latency_ms": 13.18
       },
       {
         "question_id": "q11",
@@ -96,7 +96,7 @@
         "ground_truth_page": 51,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.18
+        "latency_ms": 13.68
       },
       {
         "question_id": "q12",
@@ -104,7 +104,7 @@
         "ground_truth_page": 16,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.18
+        "latency_ms": 12.88
       },
       {
         "question_id": "q13",
@@ -112,7 +112,7 @@
         "ground_truth_page": 13,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.16
+        "latency_ms": 8.84
       },
       {
         "question_id": "q14",
@@ -120,7 +120,7 @@
         "ground_truth_page": 46,
         "hit": false,
         "rank": null,
-        "latency_ms": 0.18
+        "latency_ms": 8.99
       },
       {
         "question_id": "q15",
@@ -128,7 +128,7 @@
         "ground_truth_page": 37,
         "hit": false,
         "rank": null,
-        "latency_ms": 0.21
+        "latency_ms": 13.96
       }
     ]
   },
@@ -136,18 +136,18 @@
     "chunk_size_chars": 1024,
     "chunk_overlap_chars": 150,
     "total_chunks": 295,
-    "recall_at_5_pct": 80.0,
-    "mrr_at_5": 0.6778,
-    "hits": 12,
-    "avg_query_latency_ms": 0.13,
+    "recall_at_5_pct": 73.33,
+    "mrr_at_5": 0.55,
+    "hits": 11,
+    "avg_query_latency_ms": 10.25,
     "detailed": [
       {
         "question_id": "q01",
         "question": "What causes statistical and computational biases in AI systems according to NIST?",
         "ground_truth_page": 18,
         "hit": true,
-        "rank": 1,
-        "latency_ms": 0.18
+        "rank": 4,
+        "latency_ms": 8.64
       },
       {
         "question_id": "q02",
@@ -155,15 +155,15 @@
         "ground_truth_page": 20,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.13
+        "latency_ms": 12.42
       },
       {
         "question_id": "q03",
         "question": "How does NIST define aleatoric uncertainty in machine learning prediction?",
         "ground_truth_page": 30,
         "hit": true,
-        "rank": 2,
-        "latency_ms": 0.12
+        "rank": 1,
+        "latency_ms": 13.39
       },
       {
         "question_id": "q04",
@@ -171,31 +171,31 @@
         "ground_truth_page": 30,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.13
+        "latency_ms": 12.47
       },
       {
         "question_id": "q05",
         "question": "What are the three major overarching categories of AI bias outlined in the NIST taxonomy?",
         "ground_truth_page": 17,
         "hit": true,
-        "rank": 1,
-        "latency_ms": 0.11
+        "rank": 4,
+        "latency_ms": 16.47
       },
       {
         "question_id": "q06",
         "question": "Which disadvantaged populations are consistently underrepresented in AI training datasets?",
         "ground_truth_page": 25,
-        "hit": true,
-        "rank": 1,
-        "latency_ms": 0.14
+        "hit": false,
+        "rank": null,
+        "latency_ms": 8.45
       },
       {
         "question_id": "q07",
         "question": "Why is it important to document and communicate the limitations of AI outputs?",
         "ground_truth_page": 27,
         "hit": true,
-        "rank": 1,
-        "latency_ms": 0.1
+        "rank": 2,
+        "latency_ms": 8.24
       },
       {
         "question_id": "q08",
@@ -203,15 +203,15 @@
         "ground_truth_page": 37,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.12
+        "latency_ms": 8.71
       },
       {
         "question_id": "q09",
         "question": "What happens when an AI model deployed in the real world experiences deployment drift?",
         "ground_truth_page": 42,
         "hit": true,
-        "rank": 3,
-        "latency_ms": 0.12
+        "rank": 1,
+        "latency_ms": 8.38
       },
       {
         "question_id": "q10",
@@ -219,7 +219,7 @@
         "ground_truth_page": 32,
         "hit": false,
         "rank": null,
-        "latency_ms": 0.12
+        "latency_ms": 8.33
       },
       {
         "question_id": "q11",
@@ -227,31 +227,31 @@
         "ground_truth_page": 51,
         "hit": true,
         "rank": 1,
-        "latency_ms": 0.14
+        "latency_ms": 8.78
       },
       {
         "question_id": "q12",
         "question": "How do facial recognition technologies demonstrate personal and social trait encoding risks?",
         "ground_truth_page": 16,
-        "hit": false,
-        "rank": null,
-        "latency_ms": 0.13
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 7.45
       },
       {
         "question_id": "q13",
         "question": "What role does stakeholder feedback play in shaping AI bias risk discussions?",
         "ground_truth_page": 13,
-        "hit": true,
-        "rank": 1,
-        "latency_ms": 0.11
+        "hit": false,
+        "rank": null,
+        "latency_ms": 12.93
       },
       {
         "question_id": "q14",
         "question": "How did content filtering algorithms in social media reveal unexpected demographic disparities?",
         "ground_truth_page": 46,
         "hit": true,
-        "rank": 3,
-        "latency_ms": 0.13
+        "rank": 4,
+        "latency_ms": 9.7
       },
       {
         "question_id": "q15",
@@ -259,14 +259,14 @@
         "ground_truth_page": 37,
         "hit": false,
         "rank": null,
-        "latency_ms": 0.15
+        "latency_ms": 9.32
       }
     ]
   },
   "comparison_summary": {
     "better_setting": "Setting B (1024 chars)",
     "recall_gain": "+0.00%",
-    "mrr_gain": "+-0.0889",
+    "mrr_gain": "+-0.0467",
     "primary_reason": "Policy frameworks contain multi-clause regulatory statements and technical definitions spanning several sentences. 256-character chunks fragment these sentences mid-predicate, dropping essential context and decreasing semantic embedding alignment."
   }
 }
