@@ -48,6 +48,12 @@ cache/
 .env
 local_data/
 
+# Private notes and interview prep
+*Interview*
+*QnA*
+*cheat_sheet*
+*cheatsheet*
+
 # OS-generated files
 .DS_Store
 Thumbs.db
