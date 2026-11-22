@@ -1,6 +1,6 @@
 # Task 2: What BM25 Adds to Embedding Search & What a Re-Ranker Does
 
-*(Written from first principles for live technical defense)*
+*(A rigorous first-principles architectural analysis of retrieval paradigms and re-ranking mechanics)*
 
 ---
 

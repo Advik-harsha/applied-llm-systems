@@ -1,6 +1,6 @@
 # Task 3: The KV Cache & Why Quantization Saves Memory
 
-*(Written from first principles for live technical interview defense)*
+*(A rigorous first-principles engineering derivation of inference memory dynamics, KV cache mechanics, and weight-activation quantization)*
 
 ---
 

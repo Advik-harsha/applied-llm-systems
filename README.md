@@ -29,7 +29,7 @@ applied-llm-systems/
 │   ├── benchmark_chunks.py         # Empirical chunk comparison (Recall@5 & MRR across 256 vs 1024 chars)
 │   ├── test_dataset.json           # 15 domain-expert test questions with exact ground-truth passages
 │   ├── failure_cases_analysis.md   # Analysis of 2 empirical retrieval failures and structural fixes
-│   └── bm25_and_reranker_deepdive.md # Theoretical defense: Lexical BM25 vs Dense + Cross-Encoder Re-rankers
+│   └── bm25_and_reranker_deepdive.md # Architectural analysis: Lexical BM25 vs Dense + Cross-Encoder Re-rankers
 │
 ├── task3_local_optimization/       # Module 3: Local Quantized Inference & Serving Optimization
 │   ├── benchmark_runner.py         # Profiler measuring tokens/sec, TTFT, and Peak RSS memory
